@@ -33,6 +33,11 @@ class Database {
         return this.elements;
     }
 
+    reset(){
+      this.elements = [];
+    }
+
+
     insert(array){
 
         var elements = [];

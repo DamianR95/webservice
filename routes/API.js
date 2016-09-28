@@ -24,7 +24,7 @@ router.post('/insert', function(req,res){
       return res.send({success: false, message: 'Please send an array'});
 
   var result = Database.insert(objects);
-  
+
   if(result.length == 0){
     return res.send({success: true, message: 'Rows added'});
   } else {
@@ -36,6 +36,11 @@ router.post('/insert', function(req,res){
 
 router.post('/get', function(req,res){
   res.send({objects: Database.get()})
+})
+
+router.post('/reset', function(req,res){
+  Database.reset();
+  res.send({success:true,meesage: 'Reseting Database...'});
 })
 
 
