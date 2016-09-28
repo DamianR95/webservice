@@ -40,7 +40,7 @@ router.post('/get', function(req,res){
 
 router.post('/reset', function(req,res){
   Database.reset();
-  res.send({success:true,meesage: 'Reseting Database...'});
+  res.send({success:true, message: 'Reseting Database...'});
 })
 
 
