@@ -35,6 +35,7 @@ class Database {
 
     reset(){
       this.elements = [];
+      this.init();
     }
 
 
